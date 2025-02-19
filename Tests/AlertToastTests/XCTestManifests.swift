@@ -1,3 +1,5 @@
+
+#if os(iOS)
 import XCTest
 
 #if !canImport(ObjectiveC)
@@ -6,4 +8,5 @@ public func allTests() -> [XCTestCaseEntry] {
         testCase(AlertToastTests.allTests),
     ]
 }
+#endif
 #endif

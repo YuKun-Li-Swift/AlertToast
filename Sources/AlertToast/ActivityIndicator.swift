@@ -5,28 +5,10 @@
 //  Created by אילי זוברמן on 14/02/2021.
 //
 
+#if os(iOS)
 import SwiftUI
 
-#if os(macOS)
-@available(macOS 11, *)
-struct ActivityIndicator: NSViewRepresentable {
 
-    let color: Color
-
-    func makeNSView(context: NSViewRepresentableContext<ActivityIndicator>) -> NSProgressIndicator {
-        let nsView = NSProgressIndicator()
-        
-        nsView.isIndeterminate = true
-        nsView.style = .spinning
-        nsView.startAnimation(context)
-        
-        return nsView
-    }
-    
-    func updateNSView(_ nsView: NSProgressIndicator, context: NSViewRepresentableContext<ActivityIndicator>) {
-    }
-}
-#else
 @available(iOS 14, *)
 struct ActivityIndicator: UIViewRepresentable {
 

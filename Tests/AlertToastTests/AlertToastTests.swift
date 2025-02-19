@@ -1,3 +1,5 @@
+
+#if os(iOS)
 import XCTest
 @testable import AlertToast
 
@@ -14,3 +16,4 @@ final class AlertToastTests: XCTestCase {
         ("testInit", testInit),
     ]
 }
+#endif
